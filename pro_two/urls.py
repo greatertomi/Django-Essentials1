@@ -19,6 +19,7 @@ from app_two import views
 from django.conf.urls import include
 
 urlpatterns = [
+    path('', views.webindex),
     path('admin/', admin.site.urls),
-    path('app-two/', include('app_two.urls'))
+    path('users/', include('app_two.urls'))
 ]

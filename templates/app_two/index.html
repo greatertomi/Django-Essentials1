@@ -6,7 +6,20 @@
     <title>App Two</title>
   </head>
   <body>
-    <h2>Welcome to App Two</h2>
-    {{developer}}
+    <h2>Welcome to My list of users</h2>
+    {% if records %}
+    <ol>
+      {% for user in records %}
+      <li>User Record</li>
+      <ul>
+        <li>First Name: {{user.firstName}}</li>
+        <li>Last Name: {{user.lastName}}</li>
+        <li>Email: {{user.email}}</li>
+      </ul>
+      {% endfor %}
+    </ol>
+    {% else %}
+    <p>No Record found</p>
+    {% endif %}
   </body>
 </html>

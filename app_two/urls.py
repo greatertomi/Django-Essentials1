@@ -3,5 +3,6 @@ from app_two import views
 
 urlpatterns = [
     url('present', views.present),
-    url('', views.index)
+    url('other', views.index),
+    url('', views.getUsers)
 ]
