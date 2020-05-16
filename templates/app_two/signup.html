@@ -3,15 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
+    <title>Sign up</title>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     />
   </head>
   <body>
-    <h1>Welcome!</h1>
-    <h3>Go to /users to see the list of user information!</h3>
-    <h3>Go to /signup to sign up</h3>
+    <div class="container">
+      <h1>Please sign up here</h1>
+      <form method="POST">
+        {{form.as_p}} {% csrf_token %}
+        <input type="submit" class="btn btn-primary" value="Submit" />
+      </form>
+    </div>
   </body>
 </html>
